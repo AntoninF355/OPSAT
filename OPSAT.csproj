@@ -8,4 +8,25 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Fonts\Aero.ttf" />
+    <None Remove="Fonts\phoenicialowercase.ttf" />
+    <None Remove="Fonts\spyagencycondital.ttf" />
+    <None Remove="Images\3Elogo.png" />
+    <None Remove="Images\3Ev2Logo.png" />
+    <None Remove="Images\Trifocal_Goggle.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="MVVM\Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<Resource Include="Fonts\Aero.ttf" />
+	<Resource Include="Fonts\spyagencycondital.ttf" />
+    <Resource Include="Images\3Elogo.png" />
+    <Resource Include="Images\3Ev2Logo.png" />
+    <Resource Include="Images\Trifocal_Goggle.jpg" />
+  </ItemGroup>
+
 </Project>

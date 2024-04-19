@@ -1,0 +1,107 @@
+﻿<UserControl x:Class="OPSAT.MVVM.View.HomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OPSAT.MVVM.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="515" d:DesignWidth="740">
+    <StackPanel>
+        <!--Premier bloc performances pc-->
+        <TextBlock Text="Performance" Foreground="#21FF21" HorizontalAlignment="Left" Margin="0,0,0,20" FontSize="25"/>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="Margin" Value="0,0,0,0"/> <!--si je veux un margin entre les border-->
+                </Style>
+            </StackPanel.Resources>
+            <Border Width="370" Height="200">
+                <!--LEFT-->
+                <Border.Background>
+
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#D8091970" Offset="0.1"/>
+                        <GradientStop Color="#D80968e5" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <!--Border radius-->
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="20" RadiusY="300" Rect="0,0,370,200"/>
+                </Border.Clip>
+
+
+                <Grid>
+                    <TextBlock FontSize="15" Text="RAM&#x0a; %" Foreground="#21FF21" HorizontalAlignment="Center"></TextBlock>
+                </Grid>
+
+            </Border>
+
+
+            <Border Width="370" Height="200">
+                <!--RIGHT-->
+                <Border.Background>
+
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#D8091970" Offset="0.1"/>
+                        <GradientStop Color="#D80968e5" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <!--Border radius-->
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="20" RadiusY="300" Rect="0,0,370,200"/>
+                </Border.Clip>
+
+                <Grid>
+                    <TextBlock FontSize="15" Text="CPU&#x0a; %" Foreground="#21FF21" HorizontalAlignment="Center"></TextBlock>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+
+        <!--Bloc secondaire (evenements...-->
+        <TextBlock Text="Evenement" Foreground="#21FF21" HorizontalAlignment="Left" Margin="0,20,0,0" FontSize="25"/>
+        <StackPanel Orientation="Horizontal">
+            <Border Width="370" Height="200">
+                <Border.Background>
+                    <!--gradient de couleur-->
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#D8091970" Offset="0.1"/>
+                        <GradientStop Color="#D80968e5" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <!--Border radius-->
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="20" RadiusY="300" Rect="0,0,370,200"/>
+                </Border.Clip>
+
+                <Grid>
+                    <TextBlock FontSize="15" Text="PLACE&#x0a;HOLDER" Foreground="#21FF21" HorizontalAlignment="Center"></TextBlock>
+                </Grid>
+            </Border>
+
+
+            <Border Width="370" Height="200">
+                <Border.Background>
+
+                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                        <GradientStop Color="#D8091970" Offset="0.1"/>
+                        <GradientStop Color="#D80968e5" Offset="0.9"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+
+                <!--Border radius-->
+                <Border.Clip>
+                    <RectangleGeometry RadiusX="20" RadiusY="300" Rect="0,0,370,200"/>
+                </Border.Clip>
+
+                <Grid>
+                    <TextBlock FontSize="15" Text="PLACE&#x0a;HOLDER" Foreground="#21FF21" HorizontalAlignment="Center"></TextBlock>
+                </Grid>
+            </Border>
+        </StackPanel>
+
+    </StackPanel>
+</UserControl>

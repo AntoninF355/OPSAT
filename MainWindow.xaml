@@ -4,9 +4,83 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:OPSAT"
+        xmlns:viewModel="clr-namespace:OPSAT.MVVM.ViewModel"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Height="600" Width="920"
+        WindowStyle="None"
+        ResizeMode="CanResize"
+        Background="Transparent"
+        AllowsTransparency="True">
 
-    </Grid>
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
+
+    <Border Background="#063550" CornerRadius="5">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="170"/>
+                <ColumnDefinition/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="75"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Image Width="200" HorizontalAlignment="Left">
+                <Image.Source>
+                    <BitmapImage DecodePixelWidth="200"
+                             UriSource="/Images/Trifocal_Goggle.jpg"/>
+                </Image.Source>
+            </Image>
+            
+            
+
+
+
+            <StackPanel Grid.Row="1"> <!--MENU RADIO BUTTON-->
+
+                <RadioButton Content="Accueil" Height="50" FontSize="18" Foreground="#21FF21"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True" Command="{Binding HomeViewCommand}"/>
+
+                <RadioButton Content="Convertisseur" Height="50" FontSize="18" Foreground="#21FF21" 
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True" Command="{Binding ConvertisseurViewCommand}"/>
+
+                <RadioButton Content="Calculatrice" Height="50" FontSize="18" Foreground="#21FF21" 
+                            Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True" Command="{Binding HomeViewCommand}"/>
+
+                <RadioButton Content="Formule 1" Height="50" FontSize="18" Foreground="#21FF21" 
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True" Command="{Binding HomeViewCommand}"/>
+
+                <RadioButton Content="Meteo aviation" Height="50" FontSize="18" Foreground="#21FF21" 
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True" Command="{Binding HomeViewCommand}"/>
+
+                <RadioButton Content="Carte VFR" Height="50" FontSize="18" Foreground="#21FF21"
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True" Command="{Binding HomeViewCommand}"/>
+                
+            </StackPanel>
+            
+            
+            <!--Ce qui permet d'intéragir avec les élements PAGE PRINCIPALE binding de currentview-->
+            <ContentControl Grid.Row="1" Grid.Column="1" Margin="5" Content="{Binding CurrentView}"/>
+
+
+            <Grid.Background>
+                <ImageBrush ImageSource="/Images/3Elogo.png" Stretch="Uniform" Opacity="0.5" Viewport="0,0,1,1"/>
+            </Grid.Background>
+
+
+        </Grid>
+
+        
+    </Border>
 </Window>
